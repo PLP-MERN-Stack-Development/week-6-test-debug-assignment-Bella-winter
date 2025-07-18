@@ -1,88 +1,123 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19953782&assignment_repo_type=AssignmentRepo)
-# Testing and Debugging MERN Applications
+# 🐞 Bug Tracker App
 
-This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
+A full-stack MERN (MongoDB, Express.js, React, Node.js) application that allows users to report, view, update, and delete bugs. This project was built as part of the **Week 6 Test & Debug Assignment – Bella Winter**.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up testing environments for both client and server
-2. Write unit tests for React components and server functions
-3. Implement integration tests for API endpoints
-4. Create end-to-end tests for critical user flows
-5. Apply debugging techniques for common MERN stack issues
+## 📌 Features
 
-## Project Structure
+- ✅ User Authentication (Login/Register)
+- 🐛 Report a bug with title, description, and priority
+- 📋 View all submitted bugs
+- ✏️ Edit and delete bugs
+- 🚥 Real-time status updates
+- 💬 Alert and Modal UI components
+- ⚙️ Backend and frontend debugging
+- ✅ Integration and unit tests using Jest & Supertest
 
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- React Router
+- Tailwind CSS
+- Axios
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- dotenv
+
+### Testing
+- Jest
+- Supertest
+- React Testing Library (optional)
+
+---
+
+## 🗂️ Project Structure
+
+📦 bug-tracker
+├── client/ # Frontend
+│ ├── components/ # UI Components (Modal, Alert, Loader)
+│ ├── pages/ # Pages (Login, Register, Dashboard, BugList, NotFound)
+│ ├── App.jsx # Main App Router
+│ ├── main.jsx # Entry Point
+│ ├── index.css # Tailwind Styles
+│ └── index.html # HTML Template
+│
+├── server/ # Backend
+│ ├── models/ # Mongoose Models
+│ ├── routes/ # Express Routes
+│ ├── controllers/ # Route Controllers
+│ ├── tests/ # Jest/Supertest Files
+│ └── server.js # Main Server File
+│
+├── .env # Environment Variables
+├── README.md # This File
+└── package.json # Dependencies and Scripts
+
+---
+
+## ⚙️ Installation & Setup
+
+### Backend (Server)
+```bash
+cd server
+pnpm install
+cp .env.example .env  # Add your MongoDB URI
+pnpm run dev          # Starts the server on port 5000
 ```
-mern-testing/
-├── client/                 # React front-end
-│   ├── src/                # React source code
-│   │   ├── components/     # React components
-│   │   ├── tests/          # Client-side tests
-│   │   │   ├── unit/       # Unit tests
-│   │   │   └── integration/ # Integration tests
-│   │   └── App.jsx         # Main application component
-│   └── cypress/            # End-to-end tests
-├── server/                 # Express.js back-end
-│   ├── src/                # Server source code
-│   │   ├── controllers/    # Route controllers
-│   │   ├── models/         # Mongoose models
-│   │   ├── routes/         # API routes
-│   │   └── middleware/     # Custom middleware
-│   └── tests/              # Server-side tests
-│       ├── unit/           # Unit tests
-│       └── integration/    # Integration tests
-├── jest.config.js          # Jest configuration
-└── package.json            # Project dependencies
-```
+✅ API Endpoints
+Method	Route	Description
+POST	/api/auth/login	User login
+POST	/api/auth/register	Register a new user
+GET	/api/bugs	Fetch all bugs
+POST	/api/bugs	Create a new bug
+PUT	/api/bugs/:id	Update a bug
+DELETE	/api/bugs/:id	Delete a bug
 
-## Getting Started
+🧪 Testing
+Backend Tests
+bash
+Copy code
+cd server
+pnpm test
+📸 Screenshots
+You can add screenshots of the login page, bug list page, and bug form here to enhance your README.
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
+👩‍💻 Author
+Pauline Mwangi – GitHub
 
-## Files Included
+📜 License
+MIT License
+✅ API Endpoints
+Method	Route	Description
+POST	/api/auth/login	User login
+POST	/api/auth/register	Register a new user
+GET	/api/bugs	Fetch all bugs
+POST	/api/bugs	Create a new bug
+PUT	/api/bugs/:id	Update a bug
+DELETE	/api/bugs/:id	Delete a bug
 
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
+🧪 Testing
+Backend Tests
+bash
+Copy code
+cd server
+pnpm test
+📸 Screenshots
+You can add screenshots of the login page, bug list page, and bug form here to enhance your README.
 
-## Requirements
+👩‍💻 Author
+Pauline Mwangi – GitHub
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
+📜 License
+MIT License
 
-## Testing Tools
+yaml
+Copy code
 
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
-
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
-
-## Resources
-
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
